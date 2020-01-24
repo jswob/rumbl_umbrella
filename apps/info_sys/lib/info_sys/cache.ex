@@ -8,7 +8,7 @@ defmodule InfoSys.Cache do
   end
 
   def fetch(name \\ __MODULE__, key) do
-    {:ok, :ets.lookup_element(tab_name(name), key, 1)}
+    {:ok, :ets.lookup_element(tab_name(name), key, 2)}
   rescue
     ArgumentError -> :error
   end
